@@ -1,4 +1,4 @@
-%define		major 4
+%define		major 4.0
 
 %define		libname		%mklibname tuxcap %{major}
 %define		develname	%mklibname tuxcap -d
@@ -12,6 +12,7 @@ Group:		System/Libraries
 Url:		http://sourceforge.net/projects/tuxcap/
 Source:		%{name}-%{version}.tar.gz
 Patch0:		libtuxcap-1.4.0-includes.patch
+Patch1:		libtuxcap-1.4.0-libdir.patch
 BuildRequires:	cmake
 BuildRequires:	mesagl-devel
 BuildRequires:	imagemagick-devel
@@ -37,6 +38,7 @@ documented examples.
 
 %package -n %{develname}
 Group:		Development/C
+Provides:	%{name}-devel = %{EVRD}
 Requires:	%{libname} = %{EVRD}
 Summary:	Development headers for %{name}
 
@@ -46,6 +48,7 @@ Development headers for TuxCap Games Framework
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %__sed -i '/pythondemo1/d' tuxcap/CMakeLists.txt
 
