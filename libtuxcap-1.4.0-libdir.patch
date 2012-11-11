@@ -1,0 +1,14 @@
+diff -urN libtuxcap-1.4.0/tuxcap/lib/CMakeLists.txt libtuxcap-1.4.0-patched/tuxcap/lib/CMakeLists.txt
+--- libtuxcap-1.4.0/tuxcap/lib/CMakeLists.txt	2009-06-07 17:08:37.000000000 +1100
++++ libtuxcap-1.4.0-patched/tuxcap/lib/CMakeLists.txt	2012-03-11 17:14:18.966728045 +1100
+@@ -211,8 +211,8 @@
+ 	)
+ 
+ 	INSTALL(TARGETS tuxcap tuxcap_static
+-	LIBRARY DESTINATION lib
+-	ARCHIVE DESTINATION lib
++	LIBRARY DESTINATION ${LIB_INSTALL_DIR}
++	ARCHIVE DESTINATION ${LIB_INSTALL_DIR}
+ 	)
+ 
+ 	INSTALL(FILES 

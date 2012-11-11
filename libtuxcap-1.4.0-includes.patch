@@ -1,0 +1,22 @@
+diff -urN libtuxcap-1.4.0/tuxcap/include/ImageLib.h libtuxcap-1.4.0-patched/tuxcap/include/ImageLib.h
+--- libtuxcap-1.4.0/tuxcap/include/ImageLib.h	2009-05-14 19:00:21.000000000 +1100
++++ libtuxcap-1.4.0-patched/tuxcap/include/ImageLib.h	2012-03-11 16:15:20.000000000 +1100
+@@ -2,6 +2,7 @@
+ #define __IMAGELIB_H__
+ 
+ #include <string>
++#include <stdint.h>
+ 
+ namespace ImageLib
+ {
+diff -urN libtuxcap-1.4.0/tuxcap/include/MTRand.h libtuxcap-1.4.0-patched/tuxcap/include/MTRand.h
+--- libtuxcap-1.4.0/tuxcap/include/MTRand.h	2009-05-14 19:00:21.000000000 +1100
++++ libtuxcap-1.4.0-patched/tuxcap/include/MTRand.h	2012-03-11 16:14:45.000000000 +1100
+@@ -2,6 +2,7 @@
+ #define __MTRAND_H__
+ 
+ #include <string>
++#include <stdint.h>
+ 
+ namespace Sexy
+ {
