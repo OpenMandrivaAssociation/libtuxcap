@@ -1,11 +1,9 @@
 %define		major 4.0
-
 %define		libname		%mklibname tuxcap %{major}
 %define		develname	%mklibname tuxcap -d
-
 Name:		libtuxcap
 Version:	1.4.0
-Release:	%mkrel 1
+Release:	1
 License:	BSD
 Summary:	Port of the PopCap Games Framework used for 2D game development
 Group:		System/Libraries
@@ -14,11 +12,12 @@ Source:		%{name}-%{version}.tar.gz
 Patch0:		libtuxcap-1.4.0-includes.patch
 Patch1:		libtuxcap-1.4.0-libdir.patch
 BuildRequires:	cmake
-BuildRequires:	mesagl-devel
+BuildRequires:	pkgconfig(gl)
 BuildRequires:	imagemagick-devel
-BuildRequires:	SDL_mixer-devel
+BuildRequires:  imagemagick
+BuildRequires:	pkgconfig(SDL_mixer)
 BuildRequires:	X11-devel
-BuildRequires:	python-devel
+BuildRequires:	pkgconfig(python)
 
 %description
 The TuxCap Games Framework is a GNU/Linux and Mac OSX port of the PopCap
@@ -57,13 +56,10 @@ Development headers for TuxCap Games Framework
 %make
 
 %install
-%__rm -rf %{buildroot}
+
 %makeinstall_std -C build
 
-%__rm -f %{buildroot}%{_libdir}/*.a
-
-%clean
-%__rm -rf %{buildroot}
+rm -fr %{buildroot}%{_libdir}/*.*a
 
 %files -n %{libname}
 %{_libdir}/*.so.%{major}*
