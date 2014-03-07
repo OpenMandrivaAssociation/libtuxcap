@@ -16,7 +16,7 @@ BuildRequires:	pkgconfig(gl)
 BuildRequires:	imagemagick-devel
 BuildRequires:  imagemagick
 BuildRequires:	pkgconfig(SDL_mixer)
-BuildRequires:	X11-devel
+BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(python)
 
 %description
