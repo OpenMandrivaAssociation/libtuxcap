@@ -3,7 +3,7 @@
 %define		develname	%mklibname tuxcap -d
 Name:		libtuxcap
 Version:	1.4.0
-Release:	1
+Release:	2
 License:	BSD
 Summary:	Port of the PopCap Games Framework used for 2D game development
 Group:		System/Libraries
