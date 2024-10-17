@@ -7,7 +7,7 @@ Release:	2
 License:	BSD
 Summary:	Port of the PopCap Games Framework used for 2D game development
 Group:		System/Libraries
-Url:		http://sourceforge.net/projects/tuxcap/
+Url:		https://sourceforge.net/projects/tuxcap/
 Source:		%{name}-%{version}.tar.gz
 Patch0:		libtuxcap-1.4.0-includes.patch
 Patch1:		libtuxcap-1.4.0-libdir.patch
